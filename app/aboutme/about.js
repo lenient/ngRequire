@@ -1,14 +1,16 @@
+'use strict';
 define([], function() {
-  angular.module('about', [])
+    angular.module('about', [])
     .config(function($stateProvider) {
-      $stateProvider
-      .state('about', {
-        url: "/aboutme",
-        templateUrl: "aboutme/about-me.html",
-        controller: "AboutCtrl"
-      });
+        $stateProvider
+            .state('about', {
+                url: "/aboutme",
+                templateUrl: "aboutme/about-me.html",
+                controller: "AboutCtrl"
+            });
     })
     .controller('AboutCtrl', function($scope) {
-      $scope.pageName = "About";
+        console.log("AboutCtrl");
+        $scope.pageName = "About";
     });
 });
