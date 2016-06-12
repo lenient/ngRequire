@@ -1,2 +1,2 @@
 /* Load libs */
-define(['angular', 'angular-ui-router']);
+define('common', ['angular', 'angular-ui-router']);

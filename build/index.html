@@ -1,0 +1,24 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Angular 1.X + Require JS + UI Router</title>
+
+  <script src="node_modules/requirejs/require.js"></script>
+  <script>
+    require(["main-built"]);
+  </script>
+</head>
+<body>
+  <h1>Angular + Require JS Demo</h1>
+  <input type="text" ng-model="msg">
+  <span>{{msg}}</span>
+
+  <div>
+    <a ui-sref="home" ui-sref-opts="{reload:true}">Home</a>
+    <a ui-sref="about">About Me</a>
+  </div>
+  
+  <div ui-view></div>
+</body>
+</html>

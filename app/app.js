@@ -7,13 +7,15 @@ require(['common'], function(common) {
         angular.module('demoApp', ['ui.router', 'home', 'about']);
 
         angular.module('demoApp')
-        .config(function($stateProvider, $urlRouterProvider, $httpProvider) {
+        .config(["$stateProvider", "$urlRouterProvider", "$httpProvider", function($stateProvider, $urlRouterProvider, $httpProvider) {
             $urlRouterProvider.otherwise('/');
-        });
+        }]);
 
         // Bootstraps app
         angular.element(document).ready(function() {
-            angular.bootstrap(document, ['demoApp']);
+            angular.bootstrap(document, ['demoApp'], {
+                strictDi: true
+            });
         });
     });
 });
