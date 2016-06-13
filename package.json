@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run lite",
-    "lite": "lite-server"
+    "lite": "lite-server",
+    "prebuild": "npm run clean -s",
+    "//": "build is to minify the code into one JS file",
+    "build": "node node_modules/requirejs/bin/r.js -o build.js",
+    "clean": "rimraf ./dist/**/*.js"
   },
   "author": "lenient",
   "license": "ISC",
@@ -16,6 +20,7 @@
   },
   "devDependencies": {
     "lite-server": "^2.2.0",
-    "ng-annotate": "^1.2.1"
+    "ng-annotate": "^1.2.1",
+    "rimraf": "^2.5.2"
   }
 }

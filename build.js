@@ -6,5 +6,5 @@
     'angular-ui-router': '../node_modules/angular-ui-router/release/angular-ui-router'
   },
   name: "main",
-  out: "./build/main-built.js"
+  out: "./dist/main-built.js"
 })
