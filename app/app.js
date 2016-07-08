@@ -2,9 +2,10 @@
 require(['common'], function(common) {
     require([
         'home/home',
-        'aboutme/about'
+        'aboutme/about',
+        'list/list'
     ], function(home, about) {
-        angular.module('demoApp', ['ui.router', 'home', 'about']);
+        angular.module('demoApp', ['ui.router', 'home', 'about', 'list']);
 
         angular.module('demoApp')
         .config(function($stateProvider, $urlRouterProvider, $httpProvider) {

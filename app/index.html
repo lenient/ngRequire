@@ -3,7 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Angular 1.X + Require JS + UI Router</title>
+  <style type="text/css">
+    .active {
+      background-color: #00B388;
+    }
 
+    li {
+      list-style: none;
+    }
+  </style>
   <script data-main="main.js" src="node_modules/requirejs/require.js"></script>
 </head>
 <body>
@@ -12,8 +20,9 @@
   <span>{{msg}}</span>
 
   <div>
-    <a ui-sref="home" ui-sref-opts="{reload:true}">Home</a>
-    <a ui-sref="about">About Me</a>
+    <a ui-sref-opts="{reload:true}" ui-sref-active="active">Home</a>
+    <a ui-sref="about" ui-sref-active="active">About Me</a>
+    <a ui-sref="list" ui-sref-active="active">List</a>
   </div>
   
   <div ui-view></div>

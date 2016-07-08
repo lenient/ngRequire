@@ -1,0 +1,9 @@
+<div>
+    <ul>
+        <li ng-repeat="phone in phoneList">
+            <a ui-sref=".phone({ phoneId: phone.id, phoneIndex: $index })" ui-sref-active="active">Model: {{phone.name}}</a>
+        </li>
+    </ul>
+</div>
+
+<div ui-view></div>
