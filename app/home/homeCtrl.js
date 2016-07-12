@@ -1,7 +1,6 @@
 'use strict';
 define(function() {
     return function($scope, HomeService) {
-        console.log("HomeCtrl");
         $scope.pageName = "home";
         
         HomeService.getPageName().then(

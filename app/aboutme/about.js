@@ -10,7 +10,6 @@ define([], function() {
             });
     })
     .controller('AboutCtrl', function($scope) {
-        console.log("AboutCtrl");
         $scope.pageName = "About";
     });
 });

@@ -22,7 +22,6 @@ define(function() {
             });
     })
     .controller('ListCtrl', function($scope) {
-        console.log("ListCtrl");
         $scope.phoneList = [
             {
                 id: 1,
